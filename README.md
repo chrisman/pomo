@@ -10,14 +10,16 @@ I let the pomo run in a small pane in tmux next to other auxiliary panes like se
 
 ## Run it
 
-1. configure:
+1. configure: `cp pomo-config-example.fnl ~/.pomo-config.fnl` and edit it how you like it.
 
-    - If pomo is installed on a [shared computer](http://tilde.town/), `cp pomo-config-example.fnl ~/.pomo-config.fnl` and edit it how you like it
-    - If you're running it yourself, you can just edit the `defaults` table in pomo.fnl
+2. execute:
 
-2. execute: `fennel pomo.fnl`
+    - Run it directly with `fennel pomo.fnl`
+
+    - or if fennel is not installed, `lua main.lua`
 
 ## Dependencies
 
-- [fennel](https://fennel-lang.org/): `luarocks install fennel` (`brew install luarocks` if necessary)
+- [fennel](https://fennel-lang.org/) (optional): `luarocks install fennel` (`brew install luarocks` if necessary)
+
 - entr (optional): the makefile (`make dev`) uses entr to watch for changes to pomo.fnl (`brew install entr`)

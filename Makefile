@@ -7,7 +7,7 @@ default:
 dev: pomo.fnl
 	ls pomo.fnl | entr -c -r fennel pomo.fnl
 
-# target: compile -- compile to a lua file
+# target: compile -- compile to a single lua file
 compile: pomo.fnl
-	@fennel --compile pomo.fnl > pomo.lua
+	@fennel --compile --require-as-include pomo.fnl > pomo.lua
 	@echo "Created pomo.lua"
